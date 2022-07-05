@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Myblog" />
+		<meta name="Keywords" content="星空博客"/>
+		<meta name="Description" content="星空博客,技术分享,记录回忆"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>星空博客-博客类型管理</title>
+
+		<link rel="shortcut icon" href="../img/touch-icon-iphone-144.png">
+		<link rel="apple-touch-icon" sizes="57x57" href="../img/touch-icon-iphone-144.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="../img/touch-icon-iphone-144.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="../img/touch-icon-iphone-144.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="../img/touch-icon-iphone-144.png" />
+		
+		<link rel="stylesheet" href="../../css/icon-study.css"/>
+		<link rel="stylesheet" href="../../css/common.css"/>
+		<link rel="stylesheet" href="../../css/text-manage2.css"/>
+		<link rel="stylesheet" href="../../css/sort-manage2.css"/>
+		<script type="text/javascript" src="../../js/selector.js"></script>
+		<script type="text/javascript" src="../../js/study.js"></script>
+		
+	</head>
+	<body ondragstart="return false" oncontextmenu="return false" onselect="document.selection.empty()">
+		<!--[if lte IE 8]>
+		<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，请 <a href="https://support.dmeng.net/upgrade-your-browser.html" target="_blank">升级浏览器</a> 以获得更好的体验！</p>
+		<![endif]-->
+		<header>
+			<div class="header-box">
+				<p>
+					“他说风雨中这点痛算什么，擦干泪不要怕，至少我们还有梦!”
+					“我相信我就是我，我相信明天，我相信青春没有地平线。”
+				</p>
+				<div class="box">
+					<div class="light"></div>
+					<span class="box1">
+						<div class="star">
+							<div class="srT sr1"></div>
+							<div class="srL sr2"></div>
+							<div class="srL sr3"></div>
+							<div class="srT sr4"></div>
+							<div class="spot"></div>
+						</div>
+					</span>
+					<span class="box2">
+						<div class="star">
+							<div class="srT sr1"></div>
+							<div class="srL sr2"></div>
+							<div class="srL sr3"></div>
+							<div class="srT sr4"></div>
+							<div class="spot"></div>
+						</div>
+					</span>
+				</div>
+				<div class="album r">
+					<img src="../img/h1.jpg" alt="相册"/>
+				</div>
+				<div class="album r">
+					<img src="../img/h2.jpg" alt="相册"/>
+				</div>
+			</div>
+		</header>
+		<nav class="nav">
+			<div class="title l">记录回忆</div>
+			<ul>
+				<li><a href="/index">首页</a></li>
+				<li><a href="/articals">文章</a></li>
+				<li><a href="/album">相册</a></li>
+				<li class="current"><a href="/blogs">管理</a></li>
+				<li><a href="/showcomments">留言板</a></li>
+			</ul>
+		</nav>
+		<div class="embellish">
+			<a class="rocket"></a>
+		</div>
+		<section>
+			<aside>
+			<div class="aside">
+				<dl>
+					<dt class="leaf"><a href="/blogs">文章管理</a></dt>
+				</dl>
+				<dl>
+					<dt class="leaf" id="current"><a href="/types">分类管理</a></dt>
+				</dl>
+				<dl>
+					<dt class="leaf"><a href="">相册管理</a></dt>
+				</dl>
+				<dl>
+					<dt class="leaf"><a href="">资料管理</a></dt>
+				</dl>
+			</div>
+			</aside>
+			<article>
+				<form action="" th:object="${type}" th:action="@{/types/post}">
+					<input type="hidden" name="id" th:value="*{id}">
+					<div class="name">
+						<div class="mingcheng"><strong>名称</strong></div>
+						<input type="text" name="name" th:value="*{name}" placeholder="分类名称"><br>
+					</div>
+					<button type="submit" name="" class="fabu">提交</button>
+					<button type="" name="" class="fanhui"><a href="">返回</a></button>
+				</form>
+			</article>
+		</section>
+		<footer class="clearfix"><p>@星空博客</p></footer>
+	</body>
+</html>

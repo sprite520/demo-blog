@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Myblog" />
+		<meta name="Keywords" content="星空博客"/>
+		<meta name="Description" content="星空博客,技术分享,记录回忆"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>星空博客-留言板</title>
+		
+		<link rel="shortcut icon" href="../img/touch-icon-iphone-144.png">
+		<link rel="apple-touch-icon" sizes="57x57" href="../img/touch-icon-iphone-144.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="../img/touch-icon-iphone-144.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="../img/touch-icon-iphone-144.png" />
+		<link  rel="apple-touch-icon" sizes="144x144" href="../img/touch-icon-iphone-144.png" />
+		
+		<link rel="stylesheet" href="../css/common.css"/>
+		<link rel="stylesheet" href="../css/icon-mass.css"/>
+		<link rel="stylesheet" href="../css/message.css"/>
+		<script type="text/javascript" src="../js/selector.js"></script>
+	</head>
+	<body ondragstart="return false" oncontextmenu="return false" onselectstart="return false" onselect="document.selection.empty()">
+		<!--[if lt IE 8]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<header>
+			<div class="header-box">
+				<p>		
+					“他说风雨中这点痛算什么，擦干泪不要怕，至少我们还有梦!”
+					“我相信我就是我，我相信明天，我相信青春没有地平线。”
+				</p>
+				<div class="box">
+					<div class="light"></div>
+					<span class="box1">
+						<div class="star">
+							<div class="srT sr1"></div>
+							<div class="srL sr2"></div>
+							<div class="srL sr3"></div>
+							<div class="srT sr4"></div>
+							<div class="spot"></div>
+						</div>
+					</span>
+					<span class="box2">
+						<div class="star">
+							<div class="srT sr1"></div>
+							<div class="srL sr2"></div>
+							<div class="srL sr3"></div>
+							<div class="srT sr4"></div>
+							<div class="spot"></div>
+						</div>
+					</span>
+				</div>
+				<div class="album r">
+					<img src="img/h1.jpg" alt="相册"/>
+				</div>
+				<div class="album r">
+					<img src="img/h2.jpg" alt="相册"/>
+				</div>
+			</div>
+		</header>
+		<nav class="nav">
+			<div class="title l">记录回忆</div>
+			<ul>
+				<li><a href="/index">首页</a></li>
+				<li><a href="/articals">文章</a></li>
+				<li><a href="/album">相册</a></li>
+				<li><a href="/blogs" >管理</a></li>
+				<li class="current"><a href="">留言板</a></li>
+			</ul>
+		</nav>
+		<div class="embellish">
+			<a class="rocket"></a>
+			<div class="aside"></div>
+		</div>
+		<section>
+			<div class="comment">
+				<form class="frame"  action="#" th:action="@{/savemessage}">
+					<div class="box">
+						<div class="input-box">
+							<textarea name="content"  placeholder="留个言吧..." ></textarea>
+						</div>
+					</div>
+					<a><i class="iconfont icon-xiaolian"></i></a>
+					<a><i class="iconfont icon-tupian"></i></a>
+					<a><button type="submit"  class="oButton">畅言一下</button></a>
+				</form>
+						<br>
+						<div style="color:green; margin-left:20px;">留言内容</div>
+					<!--/*@thymesVar id="visitor_list" type=""*/-->
+						<form class="frame">
+							<div th:each="comm: ${comments}">
+							<div class="box">
+						<div class="input-box">
+							<textarea name="content"  th:text="${comm.content}" ></textarea>
+							<div class="time">发布时间：<span th:text="${#dates.format(comm.createTime,'yyyy-MM-dd HH:mm')}" ></span></div>
+						</div>
+							</div>
+								<br>
+							</div>
+						</form>
+			</div>
+
+		</section>
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+</html>

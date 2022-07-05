@@ -1,0 +1,28 @@
+article{
+	height: 0;
+}
+article form .name{
+	display: flex;
+	margin-left: 65px;
+}
+article form .mingcheng{
+	margin-top: 20px;
+	border: 1px solid #538c09;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	color: #538c09;
+	border-radius: 5px 0 0 5px;
+	font-size: 15px;
+}
+article form input{
+	margin-top: 20px;
+	border: 1px solid #559664;
+	height: 40px;
+	font-size: 15px;
+	border-radius:0 5px 5px 0;
+}
+article form button{
+	margin-top: 10px;
+	height: 40px;
+}

@@ -1,0 +1,37 @@
+.gallery-section{
+    width: 80%;
+    height: 100%;
+    padding: 20px 0;
+    background: rgba(255,255,255,0.86);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.inner-width{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+.type-types {
+    background-color: #ffffff !important;
+}
+.margin-top-sm {
+    margin-top: 10px;
+}
+.badge{
+    width:24px;
+    height:20px;
+    color:white;
+    font-weight:bold;
+    border-radius:45%;
+    background-color: #9d9d9d!important;
+}
+.btn {  margin-top: 10px; padding: 6px 10px; color: #555555;; background: rgba(230,230,230,0.8); font-size: 12px; text-align: center; border-radius: 5px; cursor: url(../img/hand.png),pointer}
+.btn:hover { background: #d8d8d8; }
+.teal{
+    border:1px solid black;
+}

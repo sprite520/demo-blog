@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="lz-en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Myblog" />
+  <meta name="Keywords" content="星空博客"/>
+  <meta name="Description" content="星空博客,技术分享,记录回忆"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>星空博客-个人中心</title>
+
+  <link rel="shortcut icon" href="../img/touch-icon-iphone-144.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="../img/touch-icon-iphone-144.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../img/touch-icon-iphone-144.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../img/touch-icon-iphone-144.png" />
+  <link  rel="apple-touch-icon" sizes="144x144" href="../img/touch-icon-iphone-144.png" />
+
+  <link rel="stylesheet" href="../css/iconfont.css">
+  <link rel="stylesheet" href="../css/common.css"/>
+  <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/user.css">
+  <script type="text/javascript" src="../js/selector.js"></script>
+  <script type="text/javascript" src="../js/index.js"></script>
+
+
+</head>
+<body ondragstart="return false" oncontextmenu="return false" onselectstart="return false" onselect="document.selection.empty()">
+          <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="">upgrade your browser</a> to improve your experience.</p>
+          <![endif]-->
+          <header>
+            <div class="header-box">
+              <p>
+                “对星空说出你的心声”
+              </p>
+              <p>
+                “每个人都是一颗闪耀的星”
+              </p>
+              <!--相册-->
+              <div class="box">
+                <div class="light"></div>
+                <span class="box1">
+                                  <div class="star">
+                                      <div class="srT sr1"></div>
+                                      <div class="srL sr2"></div>
+                                      <div class="srL sr3"></div>
+                                      <div class="srT sr4"></div>
+                                      <div class="spot"></div>
+                                  </div>
+                              </span>
+                <span class="box2">
+                                  <div class="star">
+                                      <div class="srT sr1"></div>
+                                      <div class="srL sr2"></div>
+                                      <div class="srL sr3"></div>
+                                      <div class="srT sr4"></div>
+                                      <div class="spot"></div>
+                                  </div>
+                              </span>
+              </div>
+              <div class="album r">
+                <img src="img/h1.jpg" alt="相册"/>
+              </div>
+              <div class="album r">
+                <img src="img/h2.jpg" alt="相册"/>
+              </div>
+            </div>
+          </header>
+          <nav class="nav">
+            <div class="title l">星空博客</div>
+            <ul>
+              <li><a href="/index">首页</a></li>
+              <li><a href="/articals">文章</a></li>
+              <li><a href="/album">相册</a></li>
+              <li><a href="/blogs" >管理</a></li>
+              <li><a href="/showcomments">留言板</a></li>
+            </ul>
+          </nav>
+          <div class="embellish">
+            <a class="rocket"></a>
+            <div class="aside"></div>
+          </div>
+          <section>
+            <div >
+
+
+                    <form class="zib-widget" action="#" th:action="@{/saveuserinfo}" th:object="${usi}" >
+                        <br>
+                        <br>
+                        <div class="mb30">
+                            <div class="author-set-left">用户名</div>
+                            <div class="author-set-right">
+                                <input type="input" class="form-control" th:value="${username}" name="username"  placeholder="请输入账号">
+                            </div>
+                        </div>
+                        <div class="mb30">
+                            <div class="author-set-left">密码</div>
+                            <div class="author-set-right">
+                                <input type="input" class="form-control" th:value="${password}" name="password"  placeholder="请输入密码">
+                            </div>
+                        </div>
+                        <div class="mb30">
+                            <div class="author-set-left">昵称</div>
+                            <div class="author-set-right">
+                                <input type="input" class="form-control"th:value="${nichen}" name="nichen" value="张健" placeholder="请输入用户名">
+                            </div>
+                        </div>
+                        <div class="mb30">
+                            <div class="author-set-left">心情</div>
+                            <div class="author-set-right">
+                                <input type="input" class="form-control" th:value="${xingqing}" name="xingqing" value="" placeholder="谈谈你的想法吧">
+                            </div>
+                        </div>
+                        <div class="mb30">
+                            <div class="author-set-left">隐私设置</div>
+                            <div class="author-set-right form-select">
+                                <select class="form-control" name="yingsi" th:value="${yingsi}">
+                                    <option value="not_show">社交资料 所有人都不可见</option>
+                                    <option value="public">社交资料 所有人可见</option>
+                                    <option value="just_logged">社交资料 仅注册用户可见</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb30">
+                            <div class="author-set-left">性别</div>
+                            <div class="author-set-right form-select">
+                                <select class="form-control" name="sex" th:value="${sex}">
+                                    <option value="保密">保密</option>
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb30">
+                        <div class="author-set-left">居住地</div>
+                        <div class="author-set-right">
+                            <input type="input" class="form-control" name="juzhudi" th:value="${juzhudi}" value="" placeholder="请输入居住地址">
+                        </div>
+                    </div>
+                        <div class="mb30"><div class="author-set-left">个人网站</div>
+                        <div class="author-set-right">
+                            <input type="input" class="form-control" name="wangzhanming" th:value="${wangzhanming}" value="" placeholder="请输入网站名称">
+                            <input type="input" class="form-control" name="wangzhi" th:value="${wangzhi}" style="margin-top:10px" value="" placeholder="请输入网址">
+                        </div>
+                        </div>
+                        <div class="mb30">
+                            <div class="author-set-left">QQ</div>
+                            <div class="author-set-right">
+                                <input type="input" class="form-control" name="qqnumber" th:value="${qqnumber}" value="" placeholder="请输入QQ">
+                            </div>
+                        </div>
+                        <div class="mb30">
+                            <div class="author-set-left">微信</div>
+                            <div class="author-set-right" >
+                                <input type="input" class="form-control" name="weixingnumber" th:value="${weixingnumber}" value="" placeholder="请输入微信" >
+                            </div></div>
+                        <div class="mb30">
+                            <div class="author-set-left">微博</div>
+                            <div class="author-set-right">
+                                <input type="input" class="form-control" name="weibonumber" th:value="${weibonumber}" value="" placeholder="请输入微博地址">
+                            </div>
+                        </div>
+                        <div class="mb30">
+                            <div class="author-set-left">Github</div>
+                            <div class="author-set-right">
+                                <input type="input" class="form-control" name="githubnumber" th:value="${githubnumber}" value="" placeholder="请输入Github地址">
+                            </div>
+                         </div>
+                        <div class="mb10">
+                            <div class="author-set-left"></div>
+                            <div class="author-set-right mybtn ">
+                                <button type="submit" class="btn" name="submit"><i class="fa fa-check mr10"></i>确认提交</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+          </section>
+          <footer class="clearfix"><p>@星空博客</p></footer>
+          <script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

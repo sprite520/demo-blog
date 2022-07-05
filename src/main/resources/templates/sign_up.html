@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/outstyle.css" type="text/css">
+	</head>
+	<body>
+		<div id="login-box">
+			<h1>Sign Up</h1>
+			<form action="#" th:action="@{/login/sign_up/check}">
+				<div class="input-box">
+					<input type="text" value="" name="username" maxlength="20" placeholder="Username">
+				</div>
+				<div class="input-box">
+					<input type="password" name="password" maxlength="20" placeholder="Password">
+				</div>
+				<div class="ui mini negative message" th:text="${message}">注册失败!</div>
+				<button type="submit" name="" class="">注册</button>
+			</form>
+			<div id="login-back">
+				<form action="#" th:action="@{/login}">
+					<button>返回</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Myblog" />
+		<meta name="Keywords" content="星空博客"/>
+		<meta name="Description" content="星空博客,技术分享,记录回忆"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>星空博客-博客详情</title>
+		
+		<link rel="shortcut icon" href="../img/touch-icon-iphone-144.png">
+		<link rel="apple-touch-icon" sizes="57x57" href="../img/touch-icon-iphone-144.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="../img/touch-icon-iphone-144.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="../img/touch-icon-iphone-144.png" />
+		<link  rel="apple-touch-icon" sizes="144x144" href="../img/touch-icon-iphone-144.png" />
+		
+		<link rel="stylesheet" href="../css/iconfont.css">
+		<link rel="stylesheet" href="../css/common.css"/>
+		<link rel="stylesheet" href="../css/blog.css">
+		<script type="text/javascript" src="../js/selector.js"></script>
+		<style type="text/css">
+			.B_article { min-height: 1200px; padding: 10px; }
+			.B_article h2 { text-align: center; font-size: 20px; letter-spacing: 1px; }
+			.B_article img { margin: 0 auto; display: block; }
+			.B_article h3 { margin: 14px 0; letter-spacing: 1px; color: rgba(0,0,0,.8); }
+			.B_article p { margin-bottom: 10px; line-height: 24px; letter-spacing: 1px; text-indent: 50px; }
+		</style>
+	</head>
+	<body ondragstart="return false" oncontextmenu="return false" onselectstart="return false" onselect="document.selection.empty()">
+		<!--[if lt IE 8]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<header>
+			<div class="header-box">
+				<p>		
+					“他说风雨中这点痛算什么，擦干泪不要怕，至少我们还有梦!”
+					“我相信我就是我，我相信明天，我相信青春没有地平线。”
+				</p>
+				<div class="box">
+					<div class="light"></div>
+					<span class="box1">
+						<div class="star">
+							<div class="srT sr1"></div>
+							<div class="srL sr2"></div>
+							<div class="srL sr3"></div>
+							<div class="srT sr4"></div>
+							<div class="spot"></div>
+						</div>
+					</span>
+					<span class="box2">
+						<div class="star">
+							<div class="srT sr1"></div>
+							<div class="srL sr2"></div>
+							<div class="srL sr3"></div>
+							<div class="srT sr4"></div>
+							<div class="spot"></div>
+						</div>
+					</span>
+				</div>
+				<div class="album r">
+					<img src="../img/h1.jpg" alt="相册"/>
+				</div>
+				<div class="album r">
+					<img src="../img/h2.jpg" alt="相册"/>
+				</div>
+			</div>
+		</header>
+		<nav class="nav">
+			<div class="title l">记录回忆</div>
+			<ul>
+				<li ><a href="/index">首页</a></li>
+				<li class="current"><a href="/articals">文章</a></li>
+				<li><a href="css-js.html">相册</a></li>
+				<li><a href="/blogs" >管理</a></li>
+				<li><a href="/showcomments">留言板</a></li>
+			</ul>
+		</nav>
+		<div class="embellish">
+			<a class="rocket"></a>
+			<div class="aside"></div>
+		</div>
+		<section>
+		<article>
+			<div class="art-right">
+				<div class="B_article">
+					<h2 class="title" th:text="${blog.title}"  >网站三层架构(结构层-表现层-行为层)</h2><br><br>
+					<pre id="content" th:text="${blog.content}">
+					</pre>
+				</div>
+			</div>
+		</article>
+		</section>
+		<footer class="clearfix"><p>@星空博客</p></footer>
+		<script type="text/javascript" src="../js/common.js"></script>
+	</body>
+</html>

@@ -1,0 +1,106 @@
+
+section { margin: 20px auto; padding: 15px; width: 1050px; overflow: hidden; border-radius: 15px; }
+.aside { float: left; width: 200px; }
+.aside dl { overflow: hidden; height: 100%; transition: height 0.4s; }
+.aside dt a{ z-index: 2; position: relative; cursor: url(../img/a2.png),pointer; margin-bottom: 6px; color: rgba(255,255,255,0.8); font-weight: bold; }
+
+.aside dt a:hover { font-size: 18px; font-weight: bold; color: #87de0d;  text-shadow: rgba(0,0,0,0.5) 2px 0 0, rgba(0,0,0,0.5) 0 2px 0, rgba(0,0,0,0.5) -2px 0 0, rgba(0,0,0,0.5) 0 -2px 0; }
+.aside #current a{ font-size: 18px; font-weight: bold; color: #87de0d !important;  text-shadow: rgba(0,0,0,0.5) 2px 0 0, rgba(0,0,0,0.5) 0 2px 0, rgba(0,0,0,0.5) -2px 0 0, rgba(0,0,0,0.5) 0 -2px 0; }
+article { margin:auto;background-color: #cce0d1; width: 1000px;height: 800px; border-radius: 15px; }
+.album{
+	display: flex;
+}
+.album-left1{
+	width: 499px;
+	height: 100px;
+	border-right: 1px solid #388648;
+}
+.album-right1{
+	width: 499px;
+	height: 100px;
+	border-left: 1px solid #388648;
+}
+.album-left2{
+	width: 499px;
+	height: 300px;
+	border-right: 1px solid #388648;
+}
+.album-right2{
+	width: 499px;
+	height: 300px;
+	border-left: 1px solid #388648;
+}
+.album-left3{
+	width: 499px;
+	height: 500px;
+	border-right: 1px solid #388648;
+}
+.album-right3{
+	width: 499px;
+	height: 500px;
+	border-left: 1px solid #388648;
+}
+.biaoti{
+	color: white;
+	display: block;
+	margin: auto;
+	width: 100px;
+	height: 30px;
+	background-color: #388648;
+	text-align: center;
+	border-radius: 5px;
+	line-height: 30px;
+}
+.time1{
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 25px;
+}
+.time2{
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	float: right;
+	margin-top: 25px;
+}
+.album1{
+	width: 450px;
+	height: 250px;
+	margin-left: 25px;
+	margin-top: 25px;
+	background-color: bisque;
+	border-radius: 5px;
+}
+.album2{
+	width: 450px;
+	height: 250px;
+	margin-left: 25px;
+	margin-top: 25px;
+	background-color: bisque;
+	border-radius: 5px;
+}
+.title1{
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+}
+.content{
+	display: flex;
+	height: 190px;
+	background-color: antiquewhite;
+	align-items: center;
+}
+.content a img{
+	width:180px;
+	height: 150px;
+	margin-left: 20px;
+}
+.content p{
+	margin-left: 20px;
+	width: 200px;
+	text-indent: 2ch;
+}
+
